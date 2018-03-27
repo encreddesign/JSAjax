@@ -11,9 +11,9 @@
   */
   window.jsajax.component.setup(
     '.js-jsajax-container', // root container on client
-    '.js-pagination', // pagination container on remote
+    '.js-pagination', // pagination container on client
     'https://reqres.in', // remote domain
-    '/api/users', // remote endpoint search page
+    '/api/users' // remote endpoint
   );
 
 })();
