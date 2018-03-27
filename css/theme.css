@@ -1,0 +1,109 @@
+/*--------------- THEME CSS ---------------*/
+
+html,
+body {
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* Layout */
+.l-ajax {
+  display: block;
+  width: 100%;
+}
+
+.l-ajax__title {
+  text-align: center;
+}
+
+.l-ajax__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.l-ajax__wrapper.is-loading {
+  min-height: 40vh;
+  background-color: #eeeeee;
+  opacity: 0.5;
+}
+
+.l-ajax__wrapper:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.l-ajax__block {
+  display: block;
+  float: left;
+  width: calc(31.33% - 34px);
+  margin: 0 1%;
+}
+
+.l-ajax__pagination {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.l-ajax__pagination button {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 11px 15px;
+  outline: 0;
+  border: 2px solid #000;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.l-ajax__pagination button:hover,
+.l-ajax__pagination button.is-active {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Block */
+.c-block {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #eeeeee;
+}
+
+.c-block__title {
+  margin: 0 0 12px;
+  color: #3c3c3c;
+}
+.c-block__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.c-block__image {
+  display: block;
+  max-width: 130px;
+  margin: 0 0 10px;
+}
+
+.c-block__image img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .l-ajax__block {
+    width: calc(50% - 42px);
+  }
+}
